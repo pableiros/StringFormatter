@@ -13,6 +13,10 @@ Installation
 
 To use the StringFormatter extension in an app, just drag the StringFormatter extension file (demo files and assets are not needed) into your project.
 
+CocoaPods
+--------------
+
+    pod 'StringPatternFormatter'
 
 Methods
 --------------
