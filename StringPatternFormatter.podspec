@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "StringPatternFormatter"
-  spec.version      = "1.0.0"
+  spec.version      = "1.0.3"
   spec.summary      = "Simple Text Formetter (Credit Card Number, Phone Number, Serial Number etc.)"
 
   spec.description  = <<-DESC
