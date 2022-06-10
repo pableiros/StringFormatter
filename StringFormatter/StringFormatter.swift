@@ -15,6 +15,8 @@ import UIKit
  */
 
 extension String {
+    
+    public static let creditCardFormat = "nnnn nnnn nnnn nnnn"
 
     fileprivate static let ANYONE_CHAR_UPPER = "X"
     fileprivate static let ONLY_CHAR_UPPER = "C"
@@ -22,8 +24,12 @@ extension String {
     fileprivate static let ANYONE_CHAR = "x"
     fileprivate static let ONLY_CHAR = "c"
     fileprivate static let ONLY_NUMBER = "n"
+    
+    public func creditCardFormat(oldString: String) -> String {
+        self.format(String.creditCardFormat, oldString: oldString)
+    }
 
-    func format(_ format: String, oldString: String) -> String {
+    public func format(_ format: String, oldString: String) -> String {
         let stringUnformated = self.unformat(format, oldString: oldString)
         var newString = String()
         var counter = 0
@@ -81,7 +87,7 @@ extension String {
         return newString
     }
 
-    func unformat(_ format: String, oldString: String) -> String {
+    public func unformat(_ format: String, oldString: String) -> String {
         var string: String = self
         var undefineChars = [String]()
         for i in 0..<format.count {
@@ -171,7 +177,7 @@ extension String {
 extension String {
 
     subscript (i: Int) -> String {
-        return self[i ..< i + 1]
+        return self[Range(i ..< i + 1)]
     }
 
     subscript (r: Range<Int>) -> String {
